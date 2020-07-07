@@ -2,6 +2,8 @@
 
 A Flutter application to enter and maintain data for COVID-19 patients.
 
+![COVID-App-Main-Page](/images/screenshots/MainScreen.png)
+
 ## Key Features
 - Enter data for COVID-19 patients
 - Edit data as required
