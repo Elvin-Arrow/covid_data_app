@@ -2,6 +2,7 @@ import 'package:covid_data_app/components/bottom_curved_pallet.dart';
 import 'package:covid_data_app/components/divider_with_text.dart';
 import 'package:covid_data_app/components/page_header.dart';
 import 'package:covid_data_app/components/patient_info_card.dart';
+import 'package:covid_data_app/screens/pateint_info_screen.dart';
 import 'package:covid_data_app/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -91,6 +92,9 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                             gender: 'Male',
                             age: 55,
                             condition: 'Fever',
+                            onTap: () {
+                              Navigator.pushNamed(context, PatientInfo.id);
+                            },
                           ),
                           PatientInfoCard(
                             patientName: 'Joseph Sardine',
