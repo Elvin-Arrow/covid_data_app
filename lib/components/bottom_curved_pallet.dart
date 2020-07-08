@@ -10,12 +10,15 @@ class BottomCurvedPallet extends StatelessWidget {
   final Color palletColour;
   final Color buttonColour;
   final Color buttonIconColour;
+  final Function onTap;
 
-  BottomCurvedPallet(
-      {@required this.buttonIcon,
-      this.palletColour,
-      this.buttonColour,
-      this.buttonIconColour});
+  BottomCurvedPallet({
+    @required this.buttonIcon,
+    this.palletColour,
+    this.buttonColour,
+    this.buttonIconColour,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class BottomCurvedPallet extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 35.0),
               height: MediaQuery.of(context).size.height * 0.15,
               child: GestureDetector(
-                onTap: () {},
+                onTap: onTap,
                 child: Center(
                   child: Container(
                     decoration: BoxDecoration(
