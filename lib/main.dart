@@ -14,6 +14,11 @@ class CovidApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: Color(kPrimaryBackgroundColour),
+        appBarTheme: AppBarTheme(
+          color: Color(kHeaderBackgroundColour),
+          elevation: 2.0,
+          textTheme: TextTheme(title: kHeaderTextStyle),
+        ),
       ),
       initialRoute: MainScreen.id,
       routes: {

@@ -11,49 +11,22 @@ class PatientInfo extends StatelessWidget {
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
-              title: Text('Patient Info'),
+              title: Text(
+                'Patient Info',
+                textAlign: TextAlign.center,
+              ),
               floating: true,
-              expandedHeight: 40.0,
+              expandedHeight: 100.0,
+              centerTitle: true,
+              shape: ContinuousRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  50.0,
+                ),
+              ),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
-                [
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                  PageHeader(
-                    headerText: 'Good Morning!',
-                    subHeadingText: '3 entries',
-                    headerHeight: MediaQuery.of(context).size.height * 0.15,
-                  ),
-                ],
+                [],
               ),
             )
           ],
