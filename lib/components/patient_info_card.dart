@@ -16,7 +16,10 @@ class PatientInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      padding: EdgeInsets.symmetric(
+        horizontal: 8.0,
+        vertical: 6.0,
+      ),
       child: Material(
         elevation: 2.0,
         color: Color(kPrimaryCardBackgroundColour),

@@ -9,9 +9,10 @@ class DividerWithTextOnTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 25.0,
-        vertical: 10.0,
+      padding: EdgeInsets.only(
+        left: 25.0,
+        right: 25.0,
+        top: 10.0,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
