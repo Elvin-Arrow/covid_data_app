@@ -11,6 +11,7 @@ class CovidApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: MainScreen.id,
+      debugShowCheckedModeBanner: false,
       routes: {
         MainScreen.id: (context) => MainScreen(),
         FirstEntryScreen.id: (context) => FirstEntryScreen(),
