@@ -75,7 +75,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
             children: <Widget>[
               PageHeader(
                 headerText: 'Good Morning!',
-                subHeadingText: '3 entries',
+                subHeading1: Text('3 entries'),
                 headerHeight: MediaQuery.of(context).size.height * 0.15,
               ),
               Flexible(

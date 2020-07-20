@@ -17,7 +17,7 @@ class FirstEntryScreen extends StatelessWidget {
           children: [
             PageHeader(
               headerText: 'Add a record',
-              subHeadingText: 'Page 1 of 3',
+              subHeading1: Text('Page 1 of 3'),
               headerHeight: MediaQuery.of(context).size.height * 0.15,
             ),
             Padding(
@@ -83,7 +83,8 @@ class FirstEntryScreen extends StatelessWidget {
                           'Age',
                           style: kCardTitleTextStyle,
                         ),
-                      ),CustomTextField(
+                      ),
+                      CustomTextField(
                         placeholder: 'Age',
                       ),
                       Padding(

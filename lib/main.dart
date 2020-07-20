@@ -17,7 +17,7 @@ class CovidApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           color: Color(kHeaderBackgroundColour),
           elevation: 2.0,
-          textTheme: TextTheme(title: kHeaderTextStyle),
+          textTheme: TextTheme(headline6: kHeaderTextStyle),
         ),
       ),
       initialRoute: MainScreen.id,

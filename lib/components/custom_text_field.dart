@@ -2,12 +2,10 @@ import 'package:covid_data_app/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:covid_data_app/utilities/constants.dart';
 
-/*
-* A widget housing bordered input box with text holder that moves on tap. The
-* widget allows the customization of its text colour, placeholder colour and
-* active border colour.
-*
-* */
+/// A widget housing bordered input box with text holder that moves on tap. The
+/// widget allows the customization of its text colour, placeholder colour and
+/// active border colour.
+
 class CustomTextField extends StatelessWidget {
   final String placeholder;
   final Color cursorColor;
@@ -19,12 +17,12 @@ class CustomTextField extends StatelessWidget {
 
   CustomTextField(
       {@required this.placeholder,
-        this.cursorColor = Colors.black,
-        this.placeholderColor = Colors.black38,
-        this.focusedOutlineBorder = Colors.black87,
-        this.onChanged,
-        this.isPassword = false,
-        this.keyboardType});
+      this.cursorColor = Colors.black,
+      this.placeholderColor = Colors.black38,
+      this.focusedOutlineBorder = Colors.black87,
+      this.onChanged,
+      this.isPassword = false,
+      this.keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +34,7 @@ class CustomTextField extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(10),
           labelText: this.placeholder,
-          floatingLabelBehavior: FloatingLabelBehavior.auto,
+          //floatingLabelBehavior: FloatingLabelBehavior.auto,
           labelStyle: TextStyle(
             color: this.placeholderColor,
           ),
@@ -48,9 +46,7 @@ class CustomTextField extends StatelessWidget {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(25),
-            borderSide: BorderSide(
-              color: this.placeholderColor
-            ),
+            borderSide: BorderSide(color: this.placeholderColor),
           ),
         ),
         onChanged: this.onChanged,

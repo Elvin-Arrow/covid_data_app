@@ -8,28 +8,38 @@ class PatientInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              title: Text(
-                'Patient Info',
-                textAlign: TextAlign.center,
-              ),
-              floating: true,
-              expandedHeight: 100.0,
-              centerTitle: true,
-              shape: ContinuousRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  50.0,
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              // Header
+              PageHeader(
+                headerText: 'Joseph Sardine',
+                subHeading1: Text(
+                  'Male',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-            ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [],
-              ),
-            )
-          ],
+                subHeading2: Text(
+                  'Age: 55',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                rightSubHeading: Text(
+                  'July 20, 2020',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontStyle: FontStyle.italic,
+                  ),
+                  textAlign: TextAlign.right,
+                ),
+              )
+              // Patient info
+
+              // Edit pallet
+            ],
+          ),
         ),
       ),
     );

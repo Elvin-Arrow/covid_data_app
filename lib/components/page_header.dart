@@ -2,12 +2,52 @@ import 'package:covid_data_app/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class PageHeader extends StatelessWidget {
+  /// Widget for displaying information as a header.
+  ///
+  /// The property [headerText] should not be null.
+  ///
+  PageHeader({
+    @required this.headerText,
+    this.subHeading1,
+    this.subHeading2,
+    this.rightSubHeading,
+    this.headerHeight,
+    this.padding,
+  });
+
   final double headerHeight;
   final String headerText;
-  final String subHeadingText;
+  final Widget subHeading1;
+  final Widget subHeading2;
+  final Widget rightSubHeading;
+  final Padding padding;
 
-  PageHeader(
-      {@required this.headerText, this.subHeadingText, this.headerHeight});
+  List<Widget> getWidgets() {
+    final List<Widget> widgets = [
+      Text(
+        this.headerText,
+        style: kHeaderTextStyle,
+      ),
+      SizedBox(
+        height: 5.0,
+      ),
+    ];
+    if (this.subHeading1 != null) widgets.add(this.subHeading1);
+    if (this.subHeading2 != null) widgets.add(this.subHeading2);
+    if (this.rightSubHeading != null) {
+      widgets.remove(this.subHeading2);
+      widgets.add(
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            this.subHeading2,
+            this.rightSubHeading,
+          ],
+        ),
+      );
+    }
+    return widgets;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,28 +57,15 @@ class PageHeader extends StatelessWidget {
         borderRadius: BorderRadius.circular(25.0),
       ),
       width: double.infinity,
-      height: this.headerHeight != null
-          ? this.headerHeight
-          : MediaQuery.of(context).size.height * 0.15,
-      padding: EdgeInsets.symmetric(
-        horizontal: 25.0,
-      ),
+      height: this.headerHeight ?? MediaQuery.of(context).size.height * 0.15,
+      padding: this.padding ??
+          EdgeInsets.symmetric(
+            horizontal: 25.0,
+          ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            this.headerText,
-            style: kHeaderTextStyle,
-          ),
-          SizedBox(
-            height: 5.0,
-          ),
-          Text(
-            this.subHeadingText,
-            style: kSubHeadingTextStyle,
-          ),
-        ],
+        children: getWidgets(),
       ),
     );
   }
