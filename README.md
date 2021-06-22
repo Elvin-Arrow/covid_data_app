@@ -14,8 +14,6 @@ A Flutter application to enter and maintain data for COVID-19 patients.
 
 ## The Development Team
 
-- [Muhammad Ali Buttar](https://github.com/AliButtar)
 - [Muhammad Hassan Malik](https://github.com/ihassanjavaid/)
-- [Muhammad Osama Saleem](https://github.com/IAMOSAMA111)
 - [Muhammad Talha Bin Mansoor](https://github.com/Elvin-Arrow)
 
